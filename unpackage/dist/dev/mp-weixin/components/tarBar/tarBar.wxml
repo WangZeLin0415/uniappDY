@@ -1,0 +1,1 @@
+<view class="box"><view class="item"><text>首页</text></view><view class="item"><text>关注</text></view><view class="item"><text class="plus">+</text></view><view class="item"><text>消息</text></view><view class="item"><text>我</text></view></view>

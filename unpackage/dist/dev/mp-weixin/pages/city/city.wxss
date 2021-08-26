@@ -1,0 +1,81 @@
+
+.position {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+.iconfont {
+	margin-right: 5px;
+}
+.changeCity {
+	width:100%;
+	height:40px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	padding: 0 10px;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	color:#fff;
+	background:#232323;
+	border-top:1px solid #565656;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	font-size: 12px;
+	color:#7d7d7d;
+}
+.tarBar {
+	width: 100%;
+	position: fixed;
+	bottom: 0px;
+	left:0px;
+	background: #000000;
+}
+.box {
+	width:100%;
+	height:100%;
+}
+.scroll {
+	width:100%;
+	height:calc(100% - 50px);
+	background:#232323;
+}
+.list {
+	width:100%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	        flex-wrap: wrap;
+}
+.item {
+	width:47%;
+	margin-left:2%;
+	height:auto;
+	margin-bottom: 16px;
+}
+.active {
+	position: relative;
+}
+.spo {
+	position: absolute;
+	bottom: 10px;
+	left:10px;
+	color:#fff;
+	font-size: 12px;
+}
+.img {
+	width:100%;
+}
+.disp {
+	color:#fff;
+	font-size: 14px;
+}
+

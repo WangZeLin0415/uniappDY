@@ -1,0 +1,28 @@
+
+<script>
+	export default {
+		onLaunch: function() {
+			console.log('App Launch')
+			uni.hideTabBar({
+				
+			})
+		},
+		onShow: function() {
+			console.log('App Show')
+		},
+		onHide: function() {
+			console.log('App Hide')
+		}
+	}
+</script>
+
+<style>
+	/*每个页面公共css */
+	@import url("./icon/iconfont.css");
+	
+	html,body {
+		width:100%;
+		height:100%;
+		background:rgba(0,0,0,0.5);
+	}
+</style>

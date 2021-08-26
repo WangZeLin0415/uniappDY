@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "切换城市",
+  "enablePullDownRefresh": false,
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#000000",
+  "usingComponents": {
+    "city-nav": "/pages/changeCity/cityNav"
+  }
+}

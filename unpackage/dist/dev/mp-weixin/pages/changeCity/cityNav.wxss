@@ -1,0 +1,17 @@
+
+.cityNav {
+	position: absolute;
+	top:100px;
+	right:0px;
+	color:#ccc;
+}
+.item {
+	font-size: 12px;
+	padding-right: 5px;
+	line-height: 20px;
+}
+.scale {
+	font-size: 16px;
+	color:#fff;
+}
+

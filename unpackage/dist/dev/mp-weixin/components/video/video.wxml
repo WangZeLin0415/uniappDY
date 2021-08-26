@@ -1,0 +1,1 @@
+<view class="video-box"><video class="video" src="{{src}}" controls="{{false}}" loop="{{true}}" id="myPlayer" data-event-opts="{{[['error',[['handleError',['$event']]]]]}}" binderror="__e"></video></view>

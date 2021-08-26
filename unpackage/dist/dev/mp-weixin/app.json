@@ -1,0 +1,28 @@
+{
+  "pages": [
+    "pages/changeCity/changeCity",
+    "pages/city/city",
+    "pages/login/login",
+    "pages/index/index",
+    "pages/user/user"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index"
+      },
+      {
+        "pagePath": "pages/user/user"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
+}

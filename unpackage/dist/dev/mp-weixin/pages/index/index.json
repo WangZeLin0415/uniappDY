@@ -1,0 +1,12 @@
+{
+  "navigationBarBackgroundColor": "#d93818",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "总览",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "tool": "/components/tool/tool",
+    "tab-bar": "/components/tarBar/tarBar",
+    "nav-bar": "/components/navBar/navBar",
+    "my-video": "/components/video/video"
+  }
+}

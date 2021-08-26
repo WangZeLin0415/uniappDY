@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "城市",
+  "enablePullDownRefresh": false,
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#000000",
+  "usingComponents": {
+    "tar-bar": "/components/tarBar/tarBar"
+  }
+}
