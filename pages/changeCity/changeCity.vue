@@ -18,7 +18,7 @@
 					历史访问
 				</view>
 				<view class="history">
-					<view class="historyItem" v-for="(item,index) in historyList" :key="index" >
+					<view class="historyItem" v-for="(item,index) in historyList" :key="index" @click="handlePushCity(item)" >
 						{{item}}
 					</view>
 				</view>
@@ -26,7 +26,7 @@
 					抖音热门城市
 				</view>
 				<view class="history">
-					<view class="historyItem" v-for="(item,index) in hotCity" :key="index" >
+					<view @click="handlePushCity(item)" class="historyItem" v-for="(item,index) in hotCity" :key="index" >
 						{{item}}
 					</view>
 				</view>
@@ -36,7 +36,7 @@
 						<view class="auto" :id="cities.initial" >
 							{{cities.initial}}
 						</view>
-						<view class="auto" v-for="(item,index) in cities.list" :key="item.label" >
+						<view class="auto" @click="handlePushCity(item.name)" v-for="(item,index) in cities.list" :key="item.label" >
 							{{item.name}}
 						</view>
 					</view>
@@ -66,13 +66,14 @@
 			return {
 				focusstatus:false,
 				value:'',
-				historyList:["金牛","深圳","广州","成都","南充"],
+				historyList:[],
 				hotCity:["深圳",'北京','上海','成都','广州','重庆','西安','苏州','武汉','杭州','郑州','南京','合肥','长沙','福州'],
 				citylist:[],
 				key:'',
 				
 			}
 		},
+		
 		computed:{
 			searchList() {
 				const searchList = [];
@@ -115,6 +116,13 @@
 				
 				this.citylist = city;
 			})
+			
+			const historyCitys = uni.getStorageSync('historyCitys');
+			console.log('historyList',historyCitys)
+			if(historyCitys) {
+				this.historyList = JSON.parse(historyCitys);
+				
+			}
 		},
 		methods: {
 			focus() {
@@ -129,6 +137,20 @@
 			},
 			handleChange(key) {
 				this.key = key;
+			},
+			handlePushCity(cityName) {
+				let historyCitys = uni.getStorageSync('historyCitys') || '[]';
+				historyCitys = JSON.parse(historyCitys);
+				if(!historyCitys.includes(cityName)) {
+					historyCitys.push(cityName)
+					uni.setStorageSync('historyCitys',JSON.stringify(historyCitys))
+				}
+				
+				uni.redirectTo({
+				    url: `/pages/city/city?id=${cityName}`
+				});
+				
+				
 			}
 		}
 	}

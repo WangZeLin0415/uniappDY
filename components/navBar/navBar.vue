@@ -1,9 +1,9 @@
 <template>
 	<view class="box" >
 		<view class="iconfont icon-shousuo search"></view>
-		<view class="nav">
+		<navigator open-type="navigate" class="nav" url='../../pages/city/city' >
 			同城
-		</view>
+		</navigator>
 		<view class="nav">
 			推荐
 		</view>

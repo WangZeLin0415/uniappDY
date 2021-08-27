@@ -1,7 +1,7 @@
 <template>
 	<view class="box" >
 		<scroll-view :scroll-y="true" class="scroll" >
-			<view class="changeCity">
+			<navigator open-type="reLaunch" url='../changeCity/changeCity' class="changeCity">
 				<view class="position" >
 					<view class="iconfont icon-dingwei "></view>
 					<view>自动定位：金牛</view>
@@ -9,7 +9,7 @@
 				<view class="">
 					切换 &gt;
 				</view>
-			</view>
+			</navigator>
 			<view class="list">
 				<view class="item" v-for="(item,index) in list" :key="item.id" >
 					<view class="active" >
@@ -46,6 +46,12 @@
 			request("http://localhost:3000/commonCity.json",res=>{
 				const { data } = res;
 				this.list = data;
+			})
+		},
+		onLoad(options) {
+			console.log(options);
+			uni.setNavigationBarTitle({
+				title:options.id
 			})
 		},
 		methods: {
